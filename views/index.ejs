@@ -1,0 +1,41 @@
+<%- include ("partials/header.ejs") %>
+<%- include ("partials/homenavbar.ejs")%>
+    <div class="container mt-5">
+        <br>
+        <div class="jumbotron" style="background-color:#2C2C2C; color:#FFF;">
+            <h1 class="display-4">Olá, Cidadão!</h1>
+            <p class="lead">Denuncie o Descarte Impróprio de Resíduos Sólidos</p>
+            <hr class="my-4">
+            <p>O descarte inadequado de resíduos sólidos é uma ameaça crescente ao meio ambiente e à qualidade de vida em nossas comunidades. Polui rios, contamina o solo e coloca em risco a saúde pública. Para enfrentar esse desafio, a tecnologia está ao nosso lado, e sua participação é essencial.
+
+                O EcoVigilance monitora automaticamente locais com possíveis descartes impróprios por meio de sensores inteligentes. Mas, para que possamos agir de forma ainda mais eficaz, sua ajuda é fundamental! Ao identificar locais críticos detectados pelo sistema, você contribui diretamente para a construção de cidades mais limpas, seguras e sustentáveis.
+                
+                contate as autoridades locais para confirmar e reportar áreas identificadas pelo EcoVigilance. Sua ação é rápida, segura e impacta positivamente o futuro do planeta.
+                
+                Juntos, podemos criar um ambiente mais saudável para todos. Faça parte dessa transformação!</p>
+            <p class="lead">
+              <a class="btn btn-lg" style="background-color: #D9B44A; color:#FFF;" href="/login" role="button">DENUNCIAR</a>
+            </p>
+          </div>
+        <% Reports.forEach((one)=>{ %>
+        <br>
+        <div class="card mb-3" style="background-color:#2C2C2C; color:#FFF;">
+            <div class="card-header">
+                <h2><%= one.title %></h2>
+
+            </div>
+            <div class="card-body" style="background-color:#424242;">
+                <a class="btn btn-primary"  href="/<%=one.slug%>">Visualizar descrição</a>
+            </div>
+        </div>
+        <% }) %>
+        <br>
+        <div class="row" >
+            
+            <div class="col col-12"><a href="/Reports/page/2" style="float:right;"><i class="bi bi-arrow-right-square-fill">Next</i></a></div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+<%- include ("partials/footer.ejs") %>
