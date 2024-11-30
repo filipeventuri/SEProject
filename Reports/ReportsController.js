@@ -12,24 +12,13 @@ router.get("/admin/Reports",(req,res)=>{
    
 })
 
-router.get("/admin/Reports/new", (req,res)=>{
-   //adicionar novo registro
-
-    
-})
-
 router.post("/Reports/save", (req,res)=>{
-    var title = req.body.title;
-    var body = req.body.body;
-    var location = req.body.location
     Report.create({
-        title:title,
+        title:'Descarte na área 1',
         slug:slugify(title),
-        body:body,
-        location:location
-    }).then(()=>{
-        res.redirect("/admin/Reports")
-    })
+        body:'Foi identificado um descarte indevido na área 1 no ECOVIGILANCE. Contate as autoridades responsáveis pelo local imediatamente, a sociedade precisa de voce!',
+        location:'Área 1'
+    }).then(()=>{})
 })
 
 
