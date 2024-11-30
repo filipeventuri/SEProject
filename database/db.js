@@ -1,6 +1,6 @@
 const sequelize = require("sequelize");
 
-const connection = new sequelize ('grupo0', 'grupo0_vszf_user', 'z34EigsHXMsAe0YXihNAzSIqjQ4mnsbu', {
+const connection = new sequelize ('grupo0_vszf', 'grupo0_vszf_user', 'z34EigsHXMsAe0YXihNAzSIqjQ4mnsbu', {
     host: 'dpg-ct5knejqf0us7387jc5g-a',
     port: '5432',
     dialect: 'postgres',
