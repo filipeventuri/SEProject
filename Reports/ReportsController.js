@@ -18,7 +18,9 @@ router.post("/Reports/save", (req,res)=>{
         slug:slugify(title),
         body:'Foi identificado um descarte indevido na área 1 no ECOVIGILANCE. Contate as autoridades responsáveis pelo local imediatamente, a sociedade precisa de voce!',
         location:'Área 1'
-    }).then(()=>{})
+    }).then(()=>{
+        res.redirect('/');
+    })
 })
 
 
